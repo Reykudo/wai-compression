@@ -1,0 +1,27 @@
+cabal-version: 3.0
+name: wai-compression-benchmarks
+version: 0.1.0.0
+synopsis: Reproducible codec comparisons for the recommended WAI policy
+description: Measures encoded sizes and encode/decode latency on user-supplied corpora.
+category: Benchmark
+license: MIT
+license-file: LICENSE
+author: https://github.com/Reykudo
+maintainer: 11875384+Reykudo@users.noreply.github.com
+copyright: 2026 Reykudo
+build-type: Simple
+extra-source-files: README.md fetch-corpus.py
+
+executable wai-compression-benchmarks
+  hs-source-dirs: .
+  main-is: Main.hs
+  default-language: GHC2021
+  ghc-options: -Wall -Wmissing-export-lists -Wunused-packages -threaded -rtsopts
+  build-depends:
+    base >=4.16 && <5,
+    bytestring >=0.11 && <0.13,
+    filepath >=1.4 && <1.6,
+    wai-compression ==0.1.*,
+    wai-compression-zlib ==0.1.*,
+    wai-compression-brotli ==0.1.*,
+    wai-compression-zstd ==0.1.*

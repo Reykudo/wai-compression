@@ -1,0 +1,107 @@
+{
+  "nodes": {
+    "brotli": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1000000000,
+        "narHash": "sha256-L4YfofGRuPDmvyHEMGoUgS71w3V6mPQvaPKPbv0CVjc=",
+        "type": "tarball",
+        "url": "https://hackage-content.haskell.org/package/brotli-0.0.0.3/brotli-0.0.0.3.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://hackage-content.haskell.org/package/brotli-0.0.0.3/brotli-0.0.0.3.tar.gz"
+      }
+    },
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1788450739,
+        "narHash": "sha256-glZLQlzIn1fXH6PazR2iUmTo7kzzyYSshrWhLS9TqCU=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "31729ca8cbdb4fa927b34e5f4353e6a83f39e993",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "31729ca8cbdb4fa927b34e5f4353e6a83f39e993",
+        "type": "github"
+      }
+    },
+    "haskell-flake": {
+      "locked": {
+        "lastModified": 1785340889,
+        "narHash": "sha256-W3VSD3CKNF/WSLwS+A4ru1pXb2J8GN1xi4MjWacpwJA=",
+        "owner": "srid",
+        "repo": "haskell-flake",
+        "rev": "ec69967e95d7e93b58d9f7cdd384432cb42d37ee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "srid",
+        "repo": "haskell-flake",
+        "rev": "ec69967e95d7e93b58d9f7cdd384432cb42d37ee",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1790113641,
+        "narHash": "sha256-D2aaQetafdpHxbwA4ldAxs51UX0b11pXL+JL/5L8VrM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1bc55b9def8165e82073919945c3239903fe4dc2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1bc55b9def8165e82073919945c3239903fe4dc2",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1788057806,
+        "narHash": "sha256-DTQSMxzDWmT0zhguthvegnVkn7CFqGCv4IHCzk5ZUpM=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "596e2e3940e09b2abbeb03f75fa1828c57fcd72c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "brotli": "brotli",
+        "flake-parts": "flake-parts",
+        "haskell-flake": "haskell-flake",
+        "nixpkgs": "nixpkgs",
+        "zstd": "zstd"
+      }
+    },
+    "zstd": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788663619,
+        "narHash": "sha256-+FbP4zIRfSJr3EKuO1i0+y6CAwBdPKPr/N/mFDzWOQ4=",
+        "type": "tarball",
+        "url": "https://hackage-content.haskell.org/package/zstd-0.1.4.0/zstd-0.1.4.0.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://hackage-content.haskell.org/package/zstd-0.1.4.0/zstd-0.1.4.0.tar.gz"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

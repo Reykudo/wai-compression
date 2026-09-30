@@ -1,0 +1,39 @@
+cabal-version: 3.0
+name: wai-compression-tests
+version: 0.1.0.0
+synopsis: Behavioral and property tests for wai-compression
+description: HTTP negotiation, resource limits, codec interoperability and WAI integration tests.
+category: Testing
+license: MIT
+license-file: LICENSE
+author: https://github.com/Reykudo
+maintainer: 11875384+Reykudo@users.noreply.github.com
+copyright: 2026 Reykudo
+build-type: Simple
+extra-source-files: README.md check-coverage.sh
+
+test-suite tests
+  type: exitcode-stdio-1.0
+  hs-source-dirs: .
+  main-is: Main.hs
+  default-language: GHC2021
+  ghc-options: -Wall -Wmissing-export-lists -Wunused-packages -threaded -rtsopts
+  build-depends:
+    base >=4.16 && <5,
+    bytestring >=0.11 && <0.13,
+    http-types >=0.12 && <0.13,
+    wai >=3.2.4 && <3.3,
+    wai-extra >=3.1 && <3.2,
+    warp >=3.3 && <3.5,
+    http-client >=0.7 && <0.8,
+    directory >=1.3 && <1.4,
+    tasty >=1.4 && <1.6,
+    tasty-hunit >=0.10 && <0.11,
+    tasty-quickcheck >=0.10 && <0.12,
+    zlib >=0.7 && <0.8,
+    brotli >=0.0.0.3 && <0.1,
+    zstd >=0.1.4 && <0.2,
+    wai-compression ==0.1.*,
+    wai-compression-zlib ==0.1.*,
+    wai-compression-brotli ==0.1.*,
+    wai-compression-zstd ==0.1.*

@@ -1,0 +1,25 @@
+cabal-version: 3.0
+name: wai-compression-zlib
+version: 0.1.0.0
+synopsis: Gzip and HTTP deflate codecs for wai-compression
+description: Optional streaming zlib codecs, without Brotli or Zstandard dependencies.
+category: Web
+license: MIT
+license-file: LICENSE
+author: https://github.com/Reykudo
+maintainer: 11875384+Reykudo@users.noreply.github.com
+copyright: 2026 Reykudo
+build-type: Simple
+extra-source-files: README.md
+
+library
+  hs-source-dirs: .
+  exposed-modules: Network.Wai.Middleware.Compression.Zlib
+  default-language: GHC2021
+  ghc-options: -Wall -Wcompat -Wmissing-export-lists -Wunused-packages
+  build-depends:
+    base >=4.16 && <5,
+    bytestring >=0.11 && <0.13,
+    wai-compression ==0.1.*,
+    zlib >=0.7 && <0.8,
+    streaming-commons >=0.2 && <0.3

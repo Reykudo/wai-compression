@@ -1,0 +1,29 @@
+cabal-version: 3.0
+name: wai-compression-example
+version: 0.1.0.0
+synopsis: A public-response and compressed-upload WAI example
+description: A small Warp server demonstrating explicit compression policy and bounded requests.
+category: Web
+license: MIT
+license-file: LICENSE
+author: https://github.com/Reykudo
+maintainer: 11875384+Reykudo@users.noreply.github.com
+copyright: 2026 Reykudo
+build-type: Simple
+extra-source-files: README.md
+
+executable wai-compression-example
+  hs-source-dirs: .
+  main-is: Main.hs
+  default-language: GHC2021
+  ghc-options: -Wall -Wmissing-export-lists -Wunused-packages -threaded -rtsopts
+  build-depends:
+    base >=4.16 && <5,
+    bytestring >=0.11 && <0.13,
+    http-types >=0.12 && <0.13,
+    wai >=3.2.4 && <3.3,
+    warp >=3.3 && <3.5,
+    wai-compression ==0.1.*,
+    wai-compression-zlib ==0.1.*,
+    wai-compression-brotli ==0.1.*,
+    wai-compression-zstd ==0.1.*

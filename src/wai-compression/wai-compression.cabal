@@ -1,0 +1,32 @@
+cabal-version: 3.0
+name: wai-compression
+version: 0.1.0.0
+synopsis: Modular and bounded HTTP body compression for WAI
+description: Codec-independent WAI middleware with strict negotiation and bounded decoding.
+category: Web
+license: MIT
+license-file: LICENSE
+author: https://github.com/Reykudo
+maintainer: 11875384+Reykudo@users.noreply.github.com
+copyright: 2026 Reykudo
+build-type: Simple
+extra-source-files: README.md
+
+library
+  hs-source-dirs: .
+  exposed-modules:
+    Network.Wai.Middleware.Compression
+    Network.Wai.Middleware.Compression.Codec
+    Network.Wai.Middleware.Compression.Encoding
+    Network.Wai.Middleware.Compression.Negotiation
+    Network.Wai.Middleware.Compression.Policy
+  other-modules:
+    Network.Wai.Middleware.Compression.Buffer
+    Network.Wai.Middleware.Compression.Internal
+  default-language: GHC2021
+  ghc-options: -Wall -Wcompat -Wmissing-export-lists -Wunused-packages -Wincomplete-uni-patterns -Wincomplete-record-updates
+  build-depends:
+    base >=4.16 && <5,
+    bytestring >=0.11 && <0.13,
+    http-types >=0.12 && <0.13,
+    wai >=3.2.4 && <3.3

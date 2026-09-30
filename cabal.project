@@ -1,0 +1,11 @@
+packages:
+  src/wai-compression
+  src/wai-compression-zlib
+  src/wai-compression-brotli
+  src/wai-compression-zstd
+  tests
+  example
+  benchmarks
+
+tests: True
+jobs: 1

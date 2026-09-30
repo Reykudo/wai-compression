@@ -1,0 +1,24 @@
+cabal-version: 3.0
+name: wai-compression-zstd
+version: 0.1.0.0
+synopsis: Optional bounded Zstandard codec for wai-compression
+description: Streaming Zstandard encoding and decoding with a bounded decoder window.
+category: Web
+license: MIT
+license-file: LICENSE
+author: https://github.com/Reykudo
+maintainer: 11875384+Reykudo@users.noreply.github.com
+copyright: 2026 Reykudo
+build-type: Simple
+extra-source-files: README.md
+
+library
+  hs-source-dirs: .
+  exposed-modules: Network.Wai.Middleware.Compression.Zstd
+  default-language: GHC2021
+  ghc-options: -Wall -Wcompat -Wmissing-export-lists -Wunused-packages
+  build-depends:
+    base >=4.16 && <5,
+    bytestring >=0.11 && <0.13,
+    wai-compression ==0.1.*,
+    zstd >=0.1.4 && <0.2
